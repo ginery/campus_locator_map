@@ -181,7 +181,7 @@ $("#frm_send").submit(function(e){
 		url: "../ajax/send_message.php",
 		data: $(this).serialize(),
 		success: function(data){
-           alert(data);
+         //  alert(data);
 			if(data == 1){
                 notify("top", "right", "fa fa-check", "success", "animated bounceInRight", "animated bounceOutRight","<b>Success!</b> "," Message sent.");
                 setTimeout(function(){
