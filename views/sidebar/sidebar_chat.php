@@ -2,6 +2,11 @@
  #adUserNav:hover{
  	color: #64b0f2 !important;
  }
+ @media only screen and (max-width: 600px) {
+  #img_logo {
+   display: none !important;
+  }
+}
  </style>
  <nav class="navbar header-navbar pcoded-header test" header-theme="theme6">
 	<div class="navbar-wrapper">
@@ -11,7 +16,7 @@
 	            <i class="feather icon-menu"></i>
 	        </a>
 	        <a href="#">
-	            <img class="img-fluid" src="..\assets\images\logo2.png" alt="Theme-Logo" style=" width: 55%; margin-right: 96px;">
+	            <img class="img-fluid" id="img_logo" src="..\assets\images\logo2.png" alt="Theme-Logo" style=" width: 55%; margin-right: 96px;">
 	        </a>
 	        <a class="mobile-options">
 	            <i class="feather icon-more-horizontal"></i>
