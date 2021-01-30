@@ -1,7 +1,7 @@
 <?php 
 include '../config/connection.php';
 session_start();
-date_default_timezone_set('UTC');
+date_default_timezone_set('Asia/Manila');
 $date = getCurrentDate();
 $time = date('H:i:s');
 $user_id = $_SESSION['user_id'];
