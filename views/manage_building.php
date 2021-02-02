@@ -1,4 +1,4 @@
-<?php require 'modals/add_room_sched.php';?>
+<?php require 'modals/add_building.php';?>
 <?php require 'modals/edit_room_sched.php';?>
 <?php require 'modals/view_room.php';?>
 <style type="text/css">
@@ -9,7 +9,7 @@
 <div class="card borderless-card">
 <div class="card-block inverse-breadcrumb">
     <div class="breadcrumb-header">
-        <h5>Manage Rooms</h5>
+        <h5>Manage Buildings</h5>
         <span id="date_time"></span>
     </div>
     <div class="page-header-breadcrumb">
@@ -19,7 +19,7 @@
                     <i class="icofont icofont-home"></i>
                 </a>
             </li>
-            <li class="breadcrumb-item"><a href="index.php?page=<?php echo url_page('manage-room');?>">Manage Rooms</a>
+            <li class="breadcrumb-item"><a href="index.php?page=<?php echo url_page('manage-building');?>">Manage Buildings</a>
             </li>
         </ul>
     </div>
@@ -49,7 +49,6 @@
                       </th>
                         <th>#</th>
                         <th></th>
-                        <th>Room Name</th>
                         <th>Building Name</th>
                         <th>Desc</th>
                     </tr>
@@ -62,7 +61,6 @@
                         <th>#</th>
                         <th></th>
                         <th>Room Name</th>
-                        <th>Building Name</th>
                         <th>Desc</th>
                     </tr>
                 </tfoot>
@@ -92,7 +90,7 @@ function delUser(){
 
             $.ajax({
               type:"post",
-              url:"../ajax/delete_room_sched.php",
+              url:"../ajax/delete_building.php",
               data:{
                 id:id
               },
@@ -186,7 +184,7 @@ function dt_room(){
     filter: true,
     "bSort": true,
     "ajax":{
-      "url": "../ajax/datatables/dt_room_sched.php",
+      "url": "../ajax/datatables/dt_building.php",
       "dataSrc":"data",
       "type":"POST"
     },
@@ -208,10 +206,7 @@ function dt_room(){
       }
     },
     {
-      "data":"room_name"
-    },
-    {
-      "data":"building"
+      "data":"building_name"
     },
     {
       "data":"desc"

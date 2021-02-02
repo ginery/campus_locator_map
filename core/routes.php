@@ -12,6 +12,8 @@
 		require path.'manage_message.php';
 	}else if($page == md5('manage-user')){
 		require path.'manage_user.php';
+	}else if($page == md5('manage-building')){
+		require path.'manage_building.php';
 	}
 	
 	

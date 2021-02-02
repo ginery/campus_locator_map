@@ -17,7 +17,7 @@
 }
 #road_line{
     border: 2px solid #000000;
-    background: #e6aa00;
+    background: #909090;
 }
 #livesearch{
     border: 1px solid #ccc;

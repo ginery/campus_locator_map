@@ -15,36 +15,7 @@
 
             }else{
                 $css = "display: none";
-            }?>
-            <li class="pcoded-hasmenu " style="<?php echo $css?>">
-                <a href="javascript:void(0)">
-                    <span class="pcoded-micon"><i class="fa fa-bank"></i></span>
-                    <span class="pcoded-mtext">Rooms</span>
-                </a>
-                <ul class="pcoded-submenu">
-                    <li class="">
-                        <a href="#" onclick="getAdmin()">
-                            <span class="pcoded-mtext">Admin Office</span>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="#" onclick="getRoom()">
-                            <span class="pcoded-mtext">Rooms</span>
-                        </a>
-                    </li>
-                    <!-- <li class="">
-                        <a href="#" onclick="getFaculty()">
-                            <span class="pcoded-mtext">Faculty Office</span>
-                        </a>
-                    </li> -->
-                     <!-- <li class="">
-                        <a href="#" onclick="getOther()">
-                            <span class="pcoded-mtext">Others</span>
-                        </a>
-                    </li> -->
-
-                </ul>
-            </li>
+            }?>           
              <?php if(getRole($_SESSION['role']) =="Developer"){ ?>
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)">
@@ -52,6 +23,11 @@
                     <span class="pcoded-mtext">Manage</span>
                 </a>
                 <ul class="pcoded-submenu">
+                     <li class="">
+                        <a href="index.php?page=<?php echo url_page('manage-building')?>">
+                            <span class="pcoded-mtext">Buildings</span>
+                        </a>
+                    </li>
                     <li class="">
                         <a href="index.php?page=<?php echo url_page('manage-room')?>">
                             <span class="pcoded-mtext">Rooms</span>
@@ -72,12 +48,12 @@
                 </a>
             </li>
         <?php } ?>
-            <li class=" ">
+            <!-- <li class=" ">
                 <a href="index.php?page=<?php echo url_page('manage-message')?>">
                     <span class="pcoded-micon"><i class="fa fa-envelope"></i></span>
                     <span class="pcoded-mtext">Messages</span>
                 </a>
-            </li>
+            </li> -->
             </ul>
  </div>
 </nav>
