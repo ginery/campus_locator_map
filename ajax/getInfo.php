@@ -21,8 +21,8 @@ $getRoom = mysql_query("SELECT * FROM tbl_room WHERE building_id='2'");
                 echo'  <tr style="background: #eceff5;">
  
                <td style="padding-left: 5px;" align="left"><span class="room">'.$data['room_name'].'</span></td>
-                <td style="padding-left: 5px;" align="left"><span class="subject">'.$data['no_steps_1'].'</span></td>
-                <td style="padding-left: 5px;" align="left"><span>'.$data['no_steps_2'].'</span></td>
+                <td style="padding-left: 5px;" align="left"><span class="subject">'.$data['no_steps_1']. ' Steps</span></td>
+                <td style="padding-left: 5px;" align="left"><span>'.$data['no_steps_2'].' Steps</span></td>
                 <td style="padding-left: 5px;" align="left"><span>'.$data['floor_no'].'</span></td>
                 </tr>';
  }
