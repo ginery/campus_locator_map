@@ -8,7 +8,7 @@
 	$response['data'] = array();
 	$ctr = 1;
 	$ctr1 = 2;
-	$query = mysql_query("SELECT * FROM tbl_room_sched");
+	$query = mysql_query("SELECT * FROM tbl_room");
 	while($row = mysql_fetch_array($query)){
 
 		
@@ -18,17 +18,12 @@
                                 <input class='border-checkbox' name='cbD' value='$row[id]' type='checkbox' id='checkbox".$ctr1."'>
                                 <label class='border-checkbox-label' for='checkbox".$ctr1."'></label>
                             </div>
-                        </div>";
+						</div>";
 		$list['uid'] = $ctr++;
 		$list['id'] = $row['id'];
-		$list['room_id'] = $row['room'];
-		$list['room'] = getRoomName($row['room']);
-		$list['st_id'] = $row['start_time'];
-		$list['et_id'] =$row['end_time'];
-		$list['st'] = date("g:iA", strtotime($row['start_time']));
-		$list['et'] = date("g:iA", strtotime($row['end_time']));
-		$list['subject'] = $row['subject'];
-		$list['teacher'] = $row['teacher'];
+		$list['room_name'] = $row['room_name'];
+		$list['building'] = $row['building_id'];
+		$list['desc'] = $row['desc'];
 
 		array_push($response['data'], $list);
 	$ctr1++;}

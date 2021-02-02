@@ -49,11 +49,9 @@
                       </th>
                         <th>#</th>
                         <th></th>
-                        <th>Room</th>
-                        <th>From</th>
-                        <th>To</th>
-                        <th>Subject</th>
-                        <th>Teacher</th>
+                        <th>Room Name</th>
+                        <th>Building Name</th>
+                        <th>Desc</th>
                     </tr>
                 </thead>
                    <tbody>
@@ -63,11 +61,9 @@
                         <th></th>
                         <th>#</th>
                         <th></th>
-                        <th>Room</th>
-                        <th>From</th>
-                        <th>To</th>
-                        <th>Subject</th>
-                        <th>Teacher</th>
+                        <th>Room Name</th>
+                        <th>Building Name</th>
+                        <th>Desc</th>
                     </tr>
                 </tfoot>
             </table>
@@ -207,26 +203,19 @@ function dt_room(){
               return '<div class="dropdown-inverse dropdown open"><button class="btn btn-inverse dropdown-toggle waves-effect waves-light" type="button" id="dropdown-7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-cog"></i></button>'+
                     '<div class="dropdown-menu" aria-labelledby="dropdown-7" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">'+
                     '<a class="dropdown-item waves-light waves-effect" onclick="viewUser('+row.id+')" href="#"><i class="zmdi zmdi-eye"></i> View Details</a>'+
-                    '<a class="dropdown-item waves-light waves-effect" onclick="editUser('+row.id+',\''+row.subject+'\',\''+row.teacher+'\',\''+row.room_id+'\',\''+row.st_id+'\',\''+row.et_id+'\')" href="#"><i class="zmdi zmdi-edit"></i> Edit Details</a>'+
+                    '<a class="dropdown-item waves-light waves-effect" onclick="editUser()" href="#"><i class="zmdi zmdi-edit"></i> Edit Details</a>'+
               "</div></div>";
       }
     },
     {
-      "data":"room"
+      "data":"room_name"
     },
     {
-      "data":"st"
+      "data":"building"
     },
     {
-      "data":"et"
-    },
-    {
-      "data":"subject"
-    },
-    {
-      "data":"teacher"
-    }
-    ],
+      "data":"desc"
+    }],
     "createdRow": function(row, data, dataIndex){
         $(row).css('background','#dde6ff');
     }
