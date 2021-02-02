@@ -24,7 +24,7 @@
                 </a>
                 <ul class="pcoded-submenu">
                      <li class="">
-                        <a href="index.php?page=<?php echo url_page('manage-room')?>">
+                        <a href="index.php?page=<?php echo url_page('manage-building')?>">
                             <span class="pcoded-mtext">Buildings</span>
                         </a>
                     </li>

@@ -3,7 +3,7 @@ include "../config/connection.php";
 
 $id = safe($_POST['id']);
 
-$result = mysql_query("DELETE FROM tbl_room WHERE id='$id'")or die (mysql_error());
+$result = mysql_query("DELETE FROM tbl_building WHERE id='$id'")or die (mysql_error());
 if ($result) {
 	echo 1;
 }else{

@@ -8,7 +8,7 @@
 	$response['data'] = array();
 	$ctr = 1;
 	$ctr1 = 2;
-	$query = mysql_query("SELECT * FROM tbl_room");
+	$query = mysql_query("SELECT * FROM tbl_building");
 	while($row = mysql_fetch_array($query)){
 
 		
@@ -21,8 +21,7 @@
 						</div>";
 		$list['uid'] = $ctr++;
 		$list['id'] = $row['id'];
-		$list['room_name'] = $row['room_name'];
-		$list['building'] = getBuildingName($row['building_id']);
+		$list['building_name'] = $row['building_name'];
 		$list['desc'] = $row['desc'];
 
 		array_push($response['data'], $list);

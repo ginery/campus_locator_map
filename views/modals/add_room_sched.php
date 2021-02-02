@@ -18,7 +18,11 @@
                             <div class="col-sm-6" style="float: left;">
                                 <select name="building" style="height: 35px; padding-top: 5px;" class="form-control form-control">
                                     <option value="0">--Select Building--</option>
-                                    <option value="1">Stgb Building</option>
+                                    <?php 
+                                    $tblBuilding = mysql_query("SELECT * FROM tbl_building");
+                                    while($data = mysql_fetch_array($tblBuilding)){?>
+                                    <option value="1"><?= $data['building_name']?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>                    
@@ -108,9 +112,9 @@ $("#frmAddRoom").submit(function(e){
             setTimeout(function(){
                 notify(nFrom, nAlign, nIcons, nType, nAnimIn, nAnimOut,"<b>Success!</b> "," Record added to database.");
             },100);
-            // setTimeout(function(){
-            //     location.reload();
-            // },500);
+            setTimeout(function(){
+                location.reload();
+            },500);
             }
         }
     });
