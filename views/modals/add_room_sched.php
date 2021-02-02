@@ -21,11 +21,19 @@
                                     <?php 
                                     $tblBuilding = mysql_query("SELECT * FROM tbl_building");
                                     while($data = mysql_fetch_array($tblBuilding)){?>
-                                    <option value="1"><?= $data['building_name']?></option>
+                                    <option value="<?= $data['id']?>"><?= $data['building_name']?></option>
                                     <?php } ?>
                                 </select>
                             </div>
-                        </div>                    
+                        </div> 
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group form-primary">
+                                    <input type="text" name="floor_no" class="form-control" placeholder="Floor Number" id="fname" style="text-transform: capitalize;">
+                                    <span class="form-bar"></span>
+                                </div>
+                            </div>                            
+                        </div>                   
                         
                         <div class="row">
                             <div class="col-sm-6">
@@ -44,7 +52,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group form-primary">
-                                    <input type="number" name="no_steps_1" class="form-control" placeholder="No. of steps from Gate 2" id="fname" style="text-transform: capitalize;">
+                                    <input type="number" name="no_steps_1" class="form-control" placeholder="No. of steps from Gate 1" id="fname" style="text-transform: capitalize;">
                                     <span class="form-bar"></span>
                                 </div>
                             </div>
@@ -58,7 +66,13 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group form-primary">
-                                    <input type="number" name="no_stairs" class="form-control" placeholder="No. of stairs" id="fname" style="text-transform: capitalize;">
+                                    <input type="number" name="no_stairs_1" class="form-control" placeholder="No. of stairs left" id="fname" style="text-transform: capitalize;">
+                                    <span class="form-bar"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" style="float: left;">
+                                <div class="form-group form-primary">
+                                    <input type="number" name="no_stairs_2" class="form-control" placeholder="No. of stairs right" id="lname" style="text-transform: capitalize;">
                                     <span class="form-bar"></span>
                                 </div>
                             </div>                           

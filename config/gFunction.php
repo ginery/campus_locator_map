@@ -34,7 +34,7 @@ function getRole($id){
 	return $role;
 }
 function getBuildingName($id){
-	$data = mysql_fetch_array(mysql_query("SELECT room_name FROM tbl_room WHERE id='$id'"));
+	$data = mysql_fetch_array(mysql_query("SELECT building_name FROM tbl_building WHERE id='$id'"));
 
 	return $data[0];
 

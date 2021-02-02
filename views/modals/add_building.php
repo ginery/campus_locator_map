@@ -14,7 +14,45 @@
                                     <input type="text" name="building_name" class="form-control" placeholder="Building Name" id="fname" style="text-transform: capitalize;">
                                     <span class="form-bar"></span>
                                 </div>
-                            </div>                            
+                            </div>
+                                                      
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group form-primary">
+                                    <input type="text" name="d_g1" class="form-control" placeholder="Distance from Gate 1 (km)" id="fname" style="text-transform: capitalize;">
+                                    <span class="form-bar"></span>
+                                </div>
+                            </div> 
+                            <div class="col-sm-6">
+                                <div class="form-group form-primary">
+                                    <input type="text" name="d_g2" class="form-control" placeholder="Distance from Gate 2 (km)" id="fname" style="text-transform: capitalize;">
+                                    <span class="form-bar"></span>
+                                </div>
+                            </div>
+                                                       
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group form-primary">
+                                    <input type="number" name="no_steps_1" class="form-control" placeholder="No. of steps from Gate 1" id="fname" style="text-transform: capitalize;">
+                                    <span class="form-bar"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" style="float: left;">
+                                <div class="form-group form-primary">
+                                    <input type="number" name="no_steps_2" class="form-control" placeholder="No. of steps from Gate 2" id="lname" style="text-transform: capitalize;">
+                                    <span class="form-bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                            
+                            <div class="col-sm-6" style="float: left;">
+                                <div class="form-group form-primary">
+                                    <input type="number" name="floor_no" class="form-control" placeholder="Number of floor" id="lname" style="text-transform: capitalize;">
+                                    <span class="form-bar"></span>
+                                </div>
+                            </div>                           
                         </div> 
                         <hr>
                         <div class="row">
