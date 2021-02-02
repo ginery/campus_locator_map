@@ -387,24 +387,24 @@ function getRoom(){
 
 
 }
-function getInfo(time, room){
-    //var time = $("#realTime").val();
-   // alert(room);
-    data = "id="+room+"&time="+time;
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '../ajax/getInfo.php', true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send(data);
+// function getInfo(time, room){
+//     //var time = $("#realTime").val();
+//    // alert(room);
+//     data = "id="+room+"&time="+time;
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', '../ajax/getInfo.php', true);
+//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//     xhr.send(data);
 
-    xhr.onload = function() {
-        if (xhr.status != 200) {
-        } else {
-           //alert(xhr.response);
-            $("#roomContent").html(xhr.response);
-        }
-    };
+//     xhr.onload = function() {
+//         if (xhr.status != 200) {
+//         } else {
+//            //alert(xhr.response);
+//             $("#roomContent").html(xhr.response);
+//         }
+//     };
 
-}
+// }
 function getBuildingInfo(id, title){
    
    
@@ -420,12 +420,32 @@ function getBuildingInfo(id, title){
             //alert(data);
            
             $("#modalBuildingInfo").modal();
+            $("#building_id").val(id);
             $("#buildingContent").html(data);
         }
     });
 }
 function getRoom(){
-    $("#modalInfo").modal();
+        var id = $("#building_id").val();
+        if(id == 2){
+            var roomname = 'Stgb Rooms';
+        }
+        $(".roomName").html(roomname);
+        $("#modalBuildingInfo").modal('hide');
+        $("#modalInfo").modal('show');
+        $.ajax({
+        type: "POST",
+        url: "../ajax/getInfo.php",
+        data: {
+            id: id
+        },
+        success: function(data){
+            //alert(data);
+           
+              
+            $("#roomContent").html(data);
+        }
+    });
 }
 $(document).ready(function(){
     $('#modalInfo').on('hidden.bs.modal', function () {

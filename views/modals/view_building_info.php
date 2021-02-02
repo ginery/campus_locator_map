@@ -7,6 +7,7 @@
                 <button type="button" style="margin-top: 0; margin-right: 6px;" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times-circle"></i></span></button>
             </div>
             <div class="modal-body">
+                <input type="hidden" id="building_id">
                 <button onclick="getRoom()" class="btn btn-out btn-primary btn-square pull-right">Rooms</button>
                <div id="buildingContent" class="table-responsive">
               
