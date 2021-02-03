@@ -228,7 +228,7 @@
            <!-- map lines -->
             <div class="line_map stgb" onclick="getBuildingInfo(2, 'Stgb Building')" style="position: absolute; float: left;border: 2px solid #ffea58; width: 175px; height: 66px; margin-left: 72px; margin-top: 18px;" data-toggle="tooltip" data-placement="bottom" title="Stgb Building"></div>
 
-            <div class="line_map 3_storey_lab" onclick="getBuildingInfo()" style="position: absolute; float: left; border: 2px solid #ffea58; width: 199px; height: 46px; margin-left: 247px; margin-top: 29px;" data-toggle="tooltip" data-placement="bottom" title="Three Storey Laboratory Building"></div>
+            <div class="line_map 3_storey_lab" onclick="getBuildingInfo(5, 'Three Storey Laboratory Building')" style="position: absolute; float: left; border: 2px solid #ffea58; width: 199px; height: 46px; margin-left: 247px; margin-top: 29px;" data-toggle="tooltip" data-placement="bottom" title="Three Storey Laboratory Building"></div>
 
             <div class="line_map" style="position: absolute; float: left; border: 2px solid #ffea58; width: 133px; height: 46px; margin-left: 446px; margin-top: 29px;" data-toggle="tooltip" data-placement="bottom" title="Three Storey Laboratory Building(Proposed)"></div>
 
@@ -302,6 +302,9 @@
 
             <div class="" id="road_line" style="position: absolute; float: left; width: 24px;height: 14px; margin-left: 463px; margin-top: 292px; border-right: 0;" data-toggle="tooltip" data-placement="bottom" title="Road Guide"></div>
 
+            <!-- line markings green-->
+            <div id="stgb_line_g" style="position: absolute; width: 112px; border-bottom: 4px solid #1ce60f; margin-top: 96px; margin-left: 33px; display: none;"></div>
+
         </div>
        
     </div>
@@ -310,13 +313,13 @@
 <script type="text/javascript">
 
 function searchF(val){
-   var time = $("#realTime").val();
-   // alert(val);
+  // alert(val);
     if (val.length==0) {
     document.getElementById("searchF").innerHTML="";
     $("#livesearch").hide();
      $("#inpLivesearch").val("");
      $("#schedID").val("");
+     $("#stgb_line_g").hide();
     return;
     }
     var xmlhttp = new XMLHttpRequest();
@@ -325,21 +328,17 @@ function searchF(val){
           // document.getElementById("livesearch").innerHTML=this.responseText;
           // document.getElementById("livesearch").style.border="1px solid #A5ACB2";
        
-            var o = JSON.parse(xmlhttp.response);
-           // getInfo(time, o.room_id);
-            //$("#modalInfo").modal();
-          // alert(xmlhttp.response);
-            if (o.room != null ){
+            var o = JSON.parse(xmlhttp.response);           
+            if (o.name != null ){
                 $("#livesearch").show();
-                $("#livesearch").html(o.room);
-                $("#inpLivesearch").val(o.room_id);
-                $("#schedID").val(o.id);
+                $("#livesearch").html(o.name);
+                $("#inpLivesearch").val(o.building_id);
+               // $("#schedID").val(o.id);
 
             }else{
                 $("#livesearch").show();
-                //$('#livesearch').prop('onclick',null);
-                //$('#livesearch').css('cursor','disable');
                 $("#livesearch").html("No result found.");
+                
 
             }
         }
@@ -348,65 +347,24 @@ function searchF(val){
       xmlhttp.send();
 }
 function liveseachResult(){
-    var txt = $("#livesearch").text();
+    var txt = $("#inpLivesearch").val();
     if(txt != 'No result found.'){
-    //alert(txt);
-    var id =  $("#schedID").val();
-    var time = $("#realTime").val();
-    var room_id = $("#inpLivesearch").val()
-    getInfo(time, room_id);
-    getBuildingName(id);
-    $("#modalInfo").modal();
+    
+        if(txt == 2){
+            $("#stgb_line_g").fadeIn();
+           // $(".stgb").css({})
+        }
+   
     }
     
    
 }
-function getBuildingName(id){
-
-    $.ajax({
-        type: "post",
-        url: "../ajax/getBuildingName.php",
-        data: {
-            id: id
-        },
-        success: function(data){
-            $(".roomName").text(data);
-        }
-
-    });
-}
-function getRoom(){
-    var time = $("#realTime").val();
-    $('#roomID').on('change', function() {
-     
-        getInfo(time, 1);
-        $(".stgb").addClass("active");
-        $("#modalInfo").modal();
-        $(".roomName").text("Stgb 1");  
-    });
-
-
-}
-// function getInfo(time, room){
-//     //var time = $("#realTime").val();
-//    // alert(room);
-//     data = "id="+room+"&time="+time;
-//     var xhr = new XMLHttpRequest();
-//     xhr.open('POST', '../ajax/getInfo.php', true);
-//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-//     xhr.send(data);
-
-//     xhr.onload = function() {
-//         if (xhr.status != 200) {
-//         } else {
-//            //alert(xhr.response);
-//             $("#roomContent").html(xhr.response);
-//         }
-//     };
-
-// }
 function getBuildingInfo(id, title){
-   
+        if(id == 2){
+            
+            $("#stgb_line_g").fadeIn();
+            $(".stgb").css({"border": "2px solid #ffea58"});
+        }
    
    // alert(title);
      $(".buildingName").html(title);
@@ -429,6 +387,9 @@ function getRoom(){
         var id = $("#building_id").val();
         if(id == 2){
             var roomname = 'Stgb Rooms';
+            $("#stgb_line_g").fadeIn();
+        }else if(id == 5){
+            var roomname = 'Three Storey Laboratory Rooms';
         }
         $(".roomName").html(roomname);
         $("#modalBuildingInfo").modal('hide');
@@ -448,34 +409,7 @@ function getRoom(){
     });
 }
 $(document).ready(function(){
-    $('#modalInfo').on('hidden.bs.modal', function () {
-      $(".stgb").removeClass("active");
-      $(".3_storey_lab").removeClass("active");
-      $(".comLab").removeClass("active");
-      $(".draftingBldg").removeClass("active");
-      $(".academic_2_bldg").removeClass("active");
-      $(".academic_1_bldg").removeClass("active");
-      $(".mm34Bldg").removeClass("active");
-      $(".mm12Bldg").removeClass("active");
-      $(".tvepBuilding").removeClass("active");
-      $(".autoBldg").removeClass("active");
-      $(".mechBldg").removeClass("active");
-      $(".adminBuilding").removeClass("active");
-    });
-    $('#modalBuildingInfo').on('hidden.bs.modal', function () {
-      $(".stgb").removeClass("active");
-      $(".3_storey_lab").removeClass("active");
-      $(".comLab").removeClass("active");
-      $(".draftingBldg").removeClass("active");
-      $(".academic_1_bldg").removeClass("active");
-      $(".academic_2_bldg").removeClass("active");
-      $(".mm34Bldg").removeClass("active");
-      $(".mm12Bldg").removeClass("active");
-      $(".tvepBuilding").removeClass("active");
-      $(".autoBldg").removeClass("active");
-      $(".mechBldg").removeClass("active");
-      $(".adminBuilding").removeClass("active");
-    });
+
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     });

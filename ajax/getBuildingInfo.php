@@ -24,7 +24,7 @@ echo '
                     <i class="icofont icofont-social-aim text-success"></i>KM: '.$data['distance_g2'].'
                 </li>
                 <li style="list-style-type: none;">
-                    <i class="icofont icofont-foot-print text-primary"></i>Steps: '.$data['no_steps_1'].'
+                    <i class="icofont icofont-foot-print text-primary"></i>Steps: '.$data['no_steps_2'].'
                 </li>
             </ul>                       
     </div> 

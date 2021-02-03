@@ -2,8 +2,9 @@
 include '../config/connection.php';
 
 $id = $_POST['id'];
-$getRoom = mysql_query("SELECT * FROM tbl_room WHERE building_id='2'");
+$getRoom = mysql_query("SELECT * FROM tbl_room WHERE building_id='$id'");
 
+$count = mysql_num_rows($getRoom);
 
 	
 
@@ -17,15 +18,26 @@ $getRoom = mysql_query("SELECT * FROM tbl_room WHERE building_id='2'");
               </tr>
               </thead>
               <tbody>';
+            if($count != 0){
               while($data = mysql_fetch_array($getRoom)){
-                echo'  <tr style="background: #eceff5;">
- 
-               <td style="padding-left: 5px;" align="left"><span class="room">'.$data['room_name'].'</span></td>
+                echo'  
+                <tr style="background: #eceff5;"> 
+                <td style="padding-left: 5px;" align="left"><span class="room">'.$data['room_name'].'</span></td>
                 <td style="padding-left: 5px;" align="left"><span class="subject">'.$data['no_steps_1']. '  <i class="icofont icofont-foot-print text-primary"></i></span></td>
                 <td style="padding-left: 5px;" align="left"><span>'.$data['no_steps_2'].' <i class="icofont icofont-foot-print text-primary"></i></span></td>
                 <td style="padding-left: 5px;" align="left"><span>'.$data['floor_no'].'</span></td>
                 </tr>';
- }
+            } }else{
+                echo'  
+                <tr style="background: #eceff5;"> 
+                <td style="padding-left: 5px;" align="center" colspan="5"><span class="room">No rooms encoded.</span></td>
+                </tr>';
+
+
+
+
+
+            }
              echo ' 
 
               </tbody>

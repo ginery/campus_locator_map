@@ -194,7 +194,7 @@ function dt_room(){
       "data":"cb"
     },
     {
-      "data":"uid"
+      "data":"id"
     },
     {
       "mRender": function(data,type,row){
