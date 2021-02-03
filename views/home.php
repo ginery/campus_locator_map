@@ -304,29 +304,45 @@
 
             <!-- line markings green -->
             <!-- STGB Building G1 -->
-            <div id="stgb_line_g" style="position: absolute; width: 112px; border-bottom: 4px solid #58ff74; margin-top: 97px; margin-left: 33px; display: none;"></div>
+            <div id="stgb_g" style="display: none;">
+                <div style="position: absolute; width: 112px; border-bottom: 4px solid #58ff74; margin-top: 97px; margin-left: 33px;"></div>
+                <div  style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 32px;margin-left: 677px; height: 62px;"></div>
+                <div  style="position: absolute;  width: 520px; border-bottom: 4px solid #fd4600; margin-top: 90px; margin-left: 157px; height: 4px;"></div>
+            </div>
 
             <!-- Three Storey laboratory Building G1 -->
-            <div id="tsl_g" style="position: absolute; width: 308px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px; display: none;"></div>
+            <div id="tsl_g" style="display: none;">
+                <div id="tsl_g" style="position: absolute; width: 308px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px;"></div>
+                <div style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 32px;margin-left: 677px; height: 62px;"></div>
+                <div style="position: absolute;  width: 355px; border-bottom: 4px solid #fd4600; margin-top: 90px; margin-left: 326px; height: 4px;"></div>
+            </div>
 
             <!-- Computer Building G1 -->
-            <div id="com_g1" style="position: absolute; width: 610px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px; display: none;"></div>
+            <div id="com_g" style="display: none;">
+                <div style="position: absolute; width: 610px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px;"></div>
+            </div>
 
             <!-- drafting G1-->
-            <div id="draft_g1" style="position: absolute; width: 640px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px; display: none;"></div>
-            <div id="draft_g2" style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 97px;margin-left: 673px; height: 119px; display: none;"></div>
+            <div id="draft_g" style="display: none;">
+                <div style="position: absolute; width: 640px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px;"></div>
+                <div style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 97px;margin-left: 673px; height: 119px;"></div>
+            </div>
 
              <!-- Academic 1 G1-->
-            <div id="academic1_g1" style="position: absolute; width: 640px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px; display: none;"></div>           
-            <div id="academic1_g2" style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 97px;margin-left: 673px; height: 196px; display: none;"></div>
-            <div id="academic1_g3" style="position: absolute; width: 35px; border-bottom: 4px solid #fd4600; margin-top: 290px; margin-left: 641px; height: 4px; display: none;"></div>
-            <div id="academic1_g4" style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 290px; margin-left: 640px; height: 31px; display: none;"></div>
+            <div id="academic1_g" style="display: none;">
+                <div style="position: absolute; width: 640px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px;"></div>           
+                <div style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 97px;margin-left: 673px; height: 196px;"></div>
+                <div style="position: absolute; width: 35px; border-bottom: 4px solid #fd4600; margin-top: 290px; margin-left: 641px; height: 4px;"></div>
+                <div style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 290px; margin-left: 640px; height: 31px;"></div>
+            </div>
 
             <!-- Academic 2 G1-->
-            <div id="academic2_g1" style="position: absolute; width: 640px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px; display: none;"></div>           
-            <div id="academic2_g2" style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 97px;margin-left: 673px; height: 196px; display: none;"></div>
-            <div id="academic2_g3" style="position: absolute;  width: 183px; border-bottom: 4px solid #fd4600; margin-top: 290px; margin-left: 494px; height: 4px; display: none;"></div>
-            <div id="academic2_g4" style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 290px; margin-left: 490px; height: 31px; display: none;"></div>
+            <div id="academic2_g" style="display: none;">
+                <div style="position: absolute; width: 640px; border-bottom: 4px solid #fd4600; margin-top: 97px; margin-left: 33px;"></div>           
+                <div style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 97px;margin-left: 673px; height: 196px;"></div>
+                <div style="position: absolute;  width: 183px; border-bottom: 4px solid #fd4600; margin-top: 290px; margin-left: 494px; height: 4px;"></div>
+                <div style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 290px; margin-left: 490px; height: 31px;"></div>
+            </div>
 
             <!-- TVEP Building G1-->
             <div id="academic2_g" style="display: none;">
@@ -417,18 +433,8 @@
                 <div style="position: absolute;  width: 51px; border-bottom: 4px solid #fd4600; margin-top: 90px; margin-left: 630px; height: 4px;"></div>
             </div>
 
-            <!-- Three Storey Laboratpry G2-->
-            <div id="tsl_gg" style="display: none;">          
-                <div style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 32px;margin-left: 677px; height: 62px;"></div>
-                <div style="position: absolute;  width: 355px; border-bottom: 4px solid #fd4600; margin-top: 90px; margin-left: 326px; height: 4px;"></div>
-            </div>
-
-            <!-- STGB Building G2-->
-            <div id="stgb_gg" style="display: none;">        
-                <div  style="position: absolute; width: 4px; border-left: 4px solid #fd4600; margin-top: 32px;margin-left: 677px; height: 62px;"></div>
-                <div  style="position: absolute;  width: 520px; border-bottom: 4px solid #fd4600; margin-top: 90px; margin-left: 157px; height: 4px;"></div>
-            </div>
-            
+       
+           
 
         </div>
        
@@ -444,10 +450,10 @@ function searchF(val){
     $("#livesearch").hide();
      $("#inpLivesearch").val("");
      $("#schedID").val("");
-     $("#stgb_line_g").hide();
+     $("#stgb_g").hide();
      $("#tsl_g").hide();
-     $(".stgb").css({"border":"4px solid #ffea58"});
-     $(".3_storey_lab").css({"border":"4px solid #ffea58"});
+     $(".stgb").css({"border":"2px solid #ffea58"});
+     $(".3_storey_lab").css({"border":"2px solid #ffea58"});
     return;
     }
     var xmlhttp = new XMLHttpRequest();
@@ -479,7 +485,7 @@ function liveseachResult(){
     if(txt != 'No result found.'){
     
         if(txt == 2){
-            $("#stgb_gg1").fadeIn();
+            $("#stgb_g").fadeIn();
             $(".stgb").css({"border":"4px solid red"});
         }else if(txt == 5){
             $(".3_storey_lab").css({"border":"4px solid red"});
@@ -495,7 +501,7 @@ function liveseachResult(){
 function getBuildingInfo(id, title){
         if(id == 2){
             
-            $("#stgb_line_g").fadeIn();
+            $("#stgb_g").fadeIn();
             $(".stgb").css({"border": "2px solid #ffea58"});
         }
    
