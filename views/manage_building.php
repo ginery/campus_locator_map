@@ -95,7 +95,7 @@ function delUser(){
                 id:id
               },
               success: function(data){
-                //alert(data);
+                alert(data);
                 if (data == 1) {
                   dt_room();
                    notify("top", "right", "fa fa-check", "success", "animated bounceInRight", "animated bounceOutRight","<b>Success!</b> "," Record deleted.");
