@@ -7,7 +7,7 @@ $getRoom = mysql_query("SELECT * FROM tbl_building WHERE id='$id'");
 $data = mysql_fetch_array($getRoom);
 echo ' 
 
-    <div class="col-sm-6  style="float: left;">
+    <div class="col-sm-12  style="float: left;">
         <h4 class="sub-title">From Gate 1</h4>
             <ul>
                 <li style="list-style-type: none;">
@@ -26,7 +26,14 @@ echo '
                 <li style="list-style-type: none;">
                     <i class="icofont icofont-foot-print text-primary"></i>Steps: '.$data['no_steps_2'].'
                 </li>
-            </ul>                       
-    </div> 
+            </ul>
+            <br>
+            <h4 class="sub-title">Description</h4>
+            <footer class="blockquote-footer">
+                <cite title="Source Title">'.$data['desc'].'</cite>
+            </footer>                    
+    </div>
+    
+
 ';
 ?>
