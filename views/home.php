@@ -29,7 +29,10 @@
     display: none;
     cursor: pointer;
 }
-
+#liLegend{
+    float: left;
+    margin-right: 20px;
+}
 </style>
 
 <div class="row" style="">
@@ -48,12 +51,23 @@
             <div id="livesearch" onclick="liveseachResult()"></div>
             <!-- <div class="testdiv"></div> -->
         </center>
-            <button onclick="legend()" class="btn btn-grd-primary pull-right">Legend</button>
+            <!-- <button onclick="legend()" class="btn btn-grd-primary pull-right">Legend</button> -->
             <h2 style="padding: 8px; color: #848080;">Campus Locator Map</h2>
-            <span id="date_time"></span>
+            <!-- <span id="date_time"></span> -->
             
             <input type="hidden" name="" id="realTime">
-            <hr>
+            <hr style="margin-top: 0; margin-bottom: 0;">
+            <div class="label-main">
+                <label class="label label-inverse-success"><b>Legend:</b></label>
+            </div>
+            <br>
+            <ul id="ulLegend">
+                <li id="liLegend"><i class="icofont icofont-foot-print text-primary"></i> - Footsteps</li>
+                <li id="liLegend"><i class="icofont icofont-ui-remove" style="color: #58ff74"></i> - Shortest Way</li>
+                <li id="liLegend"><i class="icofont icofont-ui-remove" style="color: #fd4600"></i> - Longest Way</li>
+            </ul>
+            <hr  style="clear: both;">
+            
 
     
     <div class="col-md-12" style="background: #a2f1a8; overflow: auto; ">

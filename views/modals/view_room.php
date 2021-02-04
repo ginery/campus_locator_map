@@ -1,5 +1,5 @@
  <!-- Modal static-->
-<div class="modal fade" id="modalView" tabindex="-1" role="dialog">
+<div class="modal fade" id="modalView" tabindex="-1" role="dialog" >
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="border: 3px solid #4e4e4e;">
             <div class="modal-header" style="padding: 5px; background: #f3f3f3; border-bottom: 1px solid #4e4e4e;">

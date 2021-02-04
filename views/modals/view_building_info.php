@@ -1,6 +1,6 @@
  <!-- Modal Add User-->
-<div class="modal fade" id="modalBuildingInfo" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="modalBuildingInfo" tabindex="-1" role="dialog" style="margin-left: 67%;">
+    <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content" style="border: 3px solid #4e4e4e;">
             <div class="modal-header"  style="padding: 5px; background: #f3f3f3; border-bottom: 1px solid #4e4e4e;">
                 <h4 style="font-size: 17px;" class="modal-title"><span class="buildingName"></span></h4> 
