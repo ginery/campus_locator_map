@@ -23,6 +23,11 @@
 		$list['id'] = $row['id'];
 		$list['building_name'] = $row['building_name'];
 		$list['desc'] = $row['desc'];
+		$list['f'] = $row['floor'];
+		$list['dg1'] = $row['distance_g1'];
+		$list['dg2'] = $row['distance_g2'];
+		$list['s1'] = $row['no_steps_1'];
+		$list['s2'] = $row['no_steps_2'];
 
 		array_push($response['data'], $list);
 	$ctr1++;}

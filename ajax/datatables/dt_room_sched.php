@@ -21,9 +21,17 @@
 						</div>";
 		$list['uid'] = $ctr++;
 		$list['id'] = $row['id'];
-		$list['room_name'] = $row['room_name'];
+		$list['rm'] = $row['room_name'];
 		$list['building'] = getBuildingName($row['building_id']);
+		$list['bid'] = $row['building_id'];
 		$list['desc'] = $row['desc'];
+		$list['floor_no'] = $row['floor_no'];
+		$list['dg1'] = $row['distance_g1'];
+		$list['dg2'] = $row['distance_g2'];
+		$list['s1'] = $row['no_steps_1'];
+		$list['s2'] = $row['no_steps_2'];
+		$list['ns1'] = $row['no_stairs_1'];
+		$list['ns2'] = $row['no_stairs_2'];
 
 		array_push($response['data'], $list);
 	$ctr1++;}

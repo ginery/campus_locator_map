@@ -1,5 +1,5 @@
 <?php require 'modals/add_building.php';?>
-<?php require 'modals/edit_room_sched.php';?>
+<?php require 'modals/edit_building.php';?>
 <?php require 'modals/view_room.php';?>
 <style type="text/css">
 .dt-body-nowrap {
@@ -112,15 +112,18 @@ function delUser(){
     notify("top", "right", "fa fa-check", "warning", "animated bounceInRight", "animated bounceOutRight","<b>Aw Snap!</b> "," You've cancel it!");
   }
 }
-function editUser(id,subject,teacher,select,st,et){
-//alert(id);
+function editUser(id,bname,dg1,dg2,s1,s2,f,desc){
+//alert(dg2);
 $("#iddNi").val(id);
-$("#start_time").val(st);
-$("#end_time").val(et);
-$("#subject").val(subject);
-$("#teacher").val(teacher);
-//alert(select);
-$('#selectOpt option[value="'+select+'"]').prop('selected', true);
+$("#building_name").val(bname);
+$("#d_g1").val(dg1);
+$("#d_g22").val(dg2);
+$("#no_steps_1").val(s1);
+$("#no_steps_2").val(s2);
+$("#floor_no").val(f);
+$("#desc").val(desc);
+// //alert(select);
+// $('#selectOpt option[value="'+select+'"]').prop('selected', true);
 $("#modalEdit").modal({
   backdrop: 'static',
   keyboard: false
@@ -129,7 +132,7 @@ $("#modalEdit").modal({
 $("#frmEditUser").submit(function(e){
 	e.preventDefault();
 
-	var url = "../ajax/edit_room_sched.php";
+	var url = "../ajax/edit_building.php";
 	var data = $(this).serialize();
 
 	$.ajax({
@@ -200,8 +203,8 @@ function dt_room(){
       "mRender": function(data,type,row){
               return '<div class="dropdown-inverse dropdown open"><button class="btn btn-inverse dropdown-toggle waves-effect waves-light" type="button" id="dropdown-7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-cog"></i></button>'+
                     '<div class="dropdown-menu" aria-labelledby="dropdown-7" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">'+
-                    '<a class="dropdown-item waves-light waves-effect" onclick="viewUser('+row.id+')" href="#"><i class="zmdi zmdi-eye"></i> View Details</a>'+
-                    '<a class="dropdown-item waves-light waves-effect" onclick="editUser()" href="#"><i class="zmdi zmdi-edit"></i> Edit Details</a>'+
+                    // '<a class="dropdown-item waves-light waves-effect" onclick="viewUser('+row.id+')" href="#"><i class="zmdi zmdi-eye"></i> View Details</a>'+
+                    '<a class="dropdown-item waves-light waves-effect" onclick="editUser('+row.id+',\''+row.building_name+'\',\''+row.dg1+'\',\''+row.dg2+'\',\''+row.s1+'\',\''+row.s2+'\',\''+row.f+'\',\''+row.desc+'\')" href="#"><i class="zmdi zmdi-edit"></i> Edit Details</a>'+
               "</div></div>";
       }
     },

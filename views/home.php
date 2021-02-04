@@ -139,7 +139,7 @@
 
               <div class="" id="road_line" style=" position: absolute;float: left;width: 14px;height: 48px; margin-left: 485px;margin-top: 274px;  border-top: 0;border-bottom: 0;" data-toggle="tooltip" data-placement="bottom" title="Road Guide"></div>
 
-              <div class="" id="road_line" style="position: absolute;float: left;width: 140px; height: 15px;margin-left: 497px; margin-top: 285px;border-right: 2px solid #e6aa00;border-left: 2px solid #e6aa00;" data-toggle="tooltip" data-placement="bottom" title="Road Guide"></div>
+              <div class="" id="road_line" style="position: absolute;float: left;width: 140px; height: 15px;margin-left: 497px; margin-top: 285px;border-right: 2px solid #909090;border-left: 2px solid #909090;" data-toggle="tooltip" data-placement="bottom" title="Road Guide"></div>
               
               <div class="" id="road_line" style="position: absolute; float: left; width: 14px; height: 15px;margin-left: 515px;margin-top: 272px;border-top: 0;border-bottom: 0;" data-toggle="tooltip" data-placement="bottom" title="Road Guide"></div>
 
