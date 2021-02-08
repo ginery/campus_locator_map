@@ -93,4 +93,17 @@ function itexmo($number,$message,$apicode,$passwd){
 		return file_get_contents($url, false, $context);
 }
 // $result = itexmo("09955965031","this is a test","TR-CAMPU965031_DBSLX", "tg]%w36and");
+function stepsToKm($steps){
+
+	$km = $steps / 1312.34;
+
+	if($km >= 1){
+		$kmm = number_format($km, 2)." km";
+	}else{
+		$kmm = number_format($km, 3)." km";
+	}
+
+
+	return $kmm;
+}
 ?>

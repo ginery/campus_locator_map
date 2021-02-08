@@ -23,8 +23,8 @@ $count = mysql_num_rows($getRoom);
                 echo'  
                 <tr style="background: #eceff5;"> 
                 <td style="padding-left: 5px;" align="left"><span class="room">'.$data['room_name'].'</span></td>
-                <td style="padding-left: 5px;" align="left"><span class="subject">'.$data['no_steps_1']. '  <i class="icofont icofont-foot-print text-primary"></i></span></td>
-                <td style="padding-left: 5px;" align="left"><span>'.$data['no_steps_2'].' <i class="icofont icofont-foot-print text-primary"></i></span></td>
+                <td style="padding-left: 5px;" align="left"><span class="subject">'.stepsToKm($data['no_steps_1']). '  <i class="icofont icofont-foot-print text-primary"></i></span></td>
+                <td style="padding-left: 5px;" align="left"><span>'.stepsToKm($data['no_steps_2']).' <i class="icofont icofont-foot-print text-primary"></i></span></td>
                 <td style="padding-left: 5px;" align="left"><span>'.$data['floor_no'].'</span></td>
                 </tr>';
             } }else{
