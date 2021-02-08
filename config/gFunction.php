@@ -100,7 +100,7 @@ function stepsToKm($steps){
 	if($km >= 1){
 		$kmm = number_format($km, 2)." km";
 	}else{
-		$kmm = number_format($km, 3)." km";
+		$kmm = number_format($km, 4)." km";
 	}
 
 
